@@ -1,0 +1,132 @@
+body.dark {
+    background: #000;
+    color: #fff;
+}
+
+body.dark .text-\[\#5c5f62\] {
+    color: rgb(192 196 201);
+}
+
+body.dark .text-\[\#1e2125\],
+body.dark .text-\[\#3c3e41\] {
+    color: #fff;
+}
+
+body.dark .input-box label {
+    background: rgb(29, 28, 28);
+    color: #ffffff8c;
+}
+
+body.dark .input-box textarea:focus+label,
+body.dark .input-box input:focus+label,
+body.dark .input-box textarea:valid+label,
+body.dark .input-box input:valid+label {
+    color: var(--color-gray);
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+body.dark .input-box textarea:focus,
+body.dark .input-box input:focus {
+    border-color: var(--color-primary);
+    background: #00000033;
+}
+
+body.dark input:-webkit-autofill,
+body.dark input:-webkit-autofill:hover,
+body.dark input:-webkit-autofill:focus,
+body.dark input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgb(29, 28, 28) inset !important;
+    box-shadow: 0 0 0 1000px rgb(29, 28, 28) inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+body.dark .input-box textarea,
+body.dark .input-box input {
+    border: 2px solid #ffffff25;
+}
+
+body.dark .custom_btn::after {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .my_contact_info,
+body.dark .scrollToTop,
+body.dark #modeBtn,
+body.dark .input-box textarea,
+body.dark .input-box input,
+body.dark .skill_img,
+body.dark .custom_btn,
+body.dark .info-box {
+    background: rgb(29, 28, 28);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .scrollToTop .arrowUp i {
+    font-size: 19px;
+    color: #fff;
+}
+
+
+#modeBtn {
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#modeBtn .icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-warning);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+#modeBtn:hover .icon {
+    stroke: var(--color-secondary) !important;
+}
+
+/* Icon visibility */
+body:not(.dark) .sun {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body:not(.dark) .moon {
+    opacity: 0;
+    transform: scale(0) rotate(90deg);
+}
+
+body.dark .sun {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+}
+
+body.dark .moon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+    z-index: 9999;
+}

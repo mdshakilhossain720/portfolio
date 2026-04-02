@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/scrool-to-top.css">
+    <link rel="stylesheet" href="./css/offcanvas.css">
+
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="./assets/icons/fav-icon/fav-icon.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <!-- scrollToTop -->
+    <div class="scrollToTop active-progress">
+        <div class="arrowUp">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div class="water" style="transform: translate(0px, 47%);">
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 560 20" style="display: none;">
+                <symbol id="wave">
+                    <path
+                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
+
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-area block lg:hidden max-[350px]:w-full">
+        <div class="tp-offcanvas-wrapper h-full">
+            <div class="tp-offcanvas-header flex items-center justify-between mb-6 pb-6 border-b border-gray-500">
+                <div class="tp-offcanvas-logo">
+                    <a href="javascript:void(0)">
+                        <img class="w-[60px]" src="./assets/logo/header-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close flex items-center justify-center">
+                    <div class="common-btn p-0 bg-transparent">
+                        <button
+                            class="text-base font-medium text-primary h-8 w-8 flex items-center gap-4 justify-center border-[1.5px] border-white rounded-[6px]">
+                            <i class="fa-solid fa-xmark !text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- menu -->
+            <div class="col-span-1 lg:col-span-8">
+                <div class="main-menu block lg:hidden">
+                    <nav>
+                        <ul class="flex flex-col items-start gap-2 justify-start">
+                            <li class="w-full">
+                                <a href="#"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Home">Home</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#about"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="About">About</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#services"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Services">Services</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#blog"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Blog">Blog</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#Skill"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Skill">Skill</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div
+                class="copy__right__area absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex flex-col h-full items-center justify-end z-[-1]">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ 2026
+                    <a href="#" class="custom__border text-primary font-bold">Shakil</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal_backdrop modal_backdrop_2 opacity-0 invisible block md:hidden"></div>
+    <!-- offcanvas end -->
+
+    <!-- header-area -->
+    <header class="mb-10 !py-4  info-box !rounded-[0] sticky top-0 z-[9]">
+        <div class="max-w-2lg mx-4 xl:mx-auto">
+            <div class="grid grid-cols-12 items-center">
+
+                <!-- logo -->
+                <div class="col-span-2">
+                    <div class="logo">
+                        <a href="#" class="flex items-center justify-start">
+                            <img class="w-[65px]" src="./assets/logo/header-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu -->
+                <div class="col-span-0 hidden lg:block lg:col-span-5">
+                    <div class="main-menu hidden lg:block">
+                        <nav>
+                            <ul class="flex items-center gap-5 xl:gap-10 justify-start">
+                                <li>
+                                    <a href="#"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block active">
+                                        <span class="explore-text" data-text="Home">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#about"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="About">About</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Services">Services</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#blog"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Blog">Blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#Skill"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Skill">Skill</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- button -->
+                <div class="col-span-10 lg:col-span-5 ml-auto flex flex-wrap justify-end items-center gap-4 lg:gap-5">
+
+                    <div class="flex md:flex-col gap-2">
+
+                        <!-- Phone -->
+                        <a href="tel:+8801700968371"
+                            class="flex items-center gap-2 text-[#3c3e41] hover:text-[#ff014f] transition">
+                            <i class="my_contact_info fa-solid fa-phone text-[#ff014f]"></i>
+                            <span class="hidden md:inline">+880 1700-968371</span>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:mdshakilhossain720@gmail.com"
+                            class="flex items-center gap-2 text-[#3c3e41] hover:text-[#ff014f] transition">
+                            <i class="my_contact_info mt-1 fa-solid fa-envelope text-[#ff014f]"></i>
+                            <span class="hidden md:inline">mdshakilhossain720@gmail.com</span>
+                        </a>
+
+                    </div>
+
+                    <!-- Dark Mode -->
+                    <button id="modeBtn" class="custom_btn !p-0">
+                        <svg class="icon sun" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="icon moon" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Contact Button -->
+                    <a href="#contact" class="custom_btn w-max justify-center contact_me_btn">
+                        Contact Me
+                    </a>
+
+                    <!-- Mobile Menu -->
+                    <a href="#" class="custom_btn justify-center p-0 w-12 rs-offcanvas-btn flex lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- portfolio info -->
+
+    <!-- my info -->
+    <section class="my-info">
+        <div class="max-w-2lg mx-4 xl:mx-auto">
+            <div class="grid grid-cols-12 gap-4 md:gap-10">
+
+                <div class="col-span-12 lg:col-span-6">
+                    <div
+                        class="left_content flex flex-col justify-center items-center lg:block  mb-[100px] sticky top-[140px]">
+                        <img class="tilt cursor-pointer w-[180px] h-[180px] border-[5px] border-primary rounded-full object-cover mb-7"
+                            src="./assets/images/portfolio-main-img/shakil-hossain-01.png" alt="">
+                        <h1
+                            class="text-[#1e2125] text-center lg:text-start font-bold text-3xl lg:text-[56px] lg:leading-[66px] mb-[22px]">
+                            Hi, I’m <span class="text-primary">Shakil Hossain</span><br>
+                            <span class="text text-2xl lg:text-[48px]"></span>
+                        </h1>
+                        <p class="text-lg text-center lg:text-start text-[#3c3e41] font-medium mb-6 lg:mb-[60px]">
+                            I'm a Mobile Application Developer specializing in Flutter in Bangladesh. <br
+                                class="hidden lg:block"> I have a
+                            serious passion for UI effects, animations, and creating intuitive, dynamic user
+                            experiences.
+                        </p>
+                        <div class="btn flex items-center gap-4">
+                            <a href="https://docs.google.com/document/d/1m1mpIO962hQjlbZ_MohrPEqj-BrBqfkXaYcI3YxXL4U/export?format=pdf"
+                                class="custom_btn" download>
+                                Download My CV
+                            </a>
+                            <a href="#contact" class="custom_btn">
+                                Hire Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-6 lg:ml-2">
+                    <!-- about me -->
+                    <div id="about" class="info-box">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            About Me
+                        </h2>
+                        <p class="text-base text-[#3c3e41] font-medium mb-5">
+                            Results-driven Flutter Developer with 2+ years of experience building high-performance,
+                            scalable cross-platform mobile applications. Strong expertise in Clean Architecture, REST
+                            API integration, and modern state management solutions like Riverpod and GetX.
+                        </p>
+
+                        <p class="text-base text-[#3c3e41] font-medium">
+                            Proven ability to deliver production-ready apps in eCommerce, LMS, on-demand services,
+                            rental solutions, and travel promotion platforms. Passionate about writing clean code and
+                            creating seamless user experiences.
+                        </p>
+                    </div>
+
+                    <!-- My Skill -->
+                    <div id="Skill" class="info-box">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            About My Skill
+                        </h2>
+                        <span class="text-[14px] uppercase tracking-[2px] mb-5 block">
+                            Primary Skills on
+                        </span>
+                        <div class="icon grid grid-cols-12 gap-4 md:gap-10 justify-items-center Skill-icon-wrepper">
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-6.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-7.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-8.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-9.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-10.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-11.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-3">
+                                <div class="skill_img">
+                                    <img src="./assets/icons/my-skill/skill-icon-12.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon grid grid-cols-5 gap-4 lg:gap-8 justify-items-center  Skill-icon-wrepper">
+                            <span
+                                class="text-[14px] col-span-5 uppercase tracking-[2px] mt-8 w-full translate-y-2 block">
+                                Secondary Skills on
+                            </span>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-13.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-14.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-15.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-16.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-17.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-18.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-19.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-span-1">
+                                <div class="skill_img skill_img_2">
+                                    <img src="./assets/icons/my-skill/skill-icon-20.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="info-box">
+                        <h2 class="text-[30px] text-primary font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Technical Skills
+                        </h2>
+
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Languages & Frameworks:</b> Dart, Flutter, C, Python</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Core:</b> OOP, Data Structures & Algorithms</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>State Management:</b> Riverpod, GetX</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Architecture:</b> Clean Architecture, MVC, MVVM</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Design Patterns:</b> Repository, Singleton, Observer</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Backend:</b> REST APIs, Firebase</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Tools:</b> Git, GitHub, GitLab, Postman</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>CI/CD:</b> GitHub Actions</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Deployment:</b> Play Store, App Store</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="info-box">
+                        <h2 class="text-[30px] text-primary font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Soft Skills
+                        </h2>
+
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Strong communication (English & Bangla)
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Problem-solving mindset
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Team collaboration
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Quick learner and adaptable
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- my experience -->
+                    <div id="experience" class="info-box">
+                        <h2 class="text-[30px] text-primary font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Work Experience
+                        </h2>
+
+                        <h3 class="text-xl font-semibold text-[#1e2125]">
+                            Junior Software Engineer (Flutter Developer)
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mb-4">
+                            Razinsoft Limited | Jan 2024 – Present
+                        </p>
+
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Developed and maintained multiple production-level Flutter applications
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Implemented Clean Architecture & MVVM
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Integrated REST APIs and Firebase (Auth, Firestore, Notifications)
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Used Riverpod and GetX for state management
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Collaborated with designers and backend developers
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Improved app performance and reduced bugs
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Published apps on Play Store & App Store
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- My Services -->
+                    <div id="services" class="info-box">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            My Services
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Business Stratagy
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Business Development
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    App Development
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Mobile App Development
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- My Portfolio -->
+                    <div id="portfolio" class="info-box">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            My Portfolio
+                        </h2>
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <a href="https://play.google.com/store/apps/details?id=com.readygrocery" target="_blank"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+
+                                    Ready Grocery App (Live)
+
+                                    <i class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 
+                                    -translate-x-[11px] scale-50 opacity-0 invisible 
+                                    group-hover:opacity-[1] group-hover:visible 
+                                    group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+
+                            <li class="group">
+                                <a href="https://play.google.com/store/apps/details?id=come.bridgeplus" target="_blank"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+
+                                    Bridge Plus App (Live)
+
+                                    <i class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 
+                                    -translate-x-[11px] scale-50 opacity-0 invisible 
+                                    group-hover:opacity-[1] group-hover:visible 
+                                    group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+
+                            <li class="group">
+                                <a href="https://play.google.com/store/apps/details?id=com.razinsoft.luandry.app"
+                                    target="_blank"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+
+                                    Laundry Service App (Live)
+
+                                    <i class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 
+                                    -translate-x-[11px] scale-50 opacity-0 invisible 
+                                    group-hover:opacity-[1] group-hover:visible 
+                                    group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- My Blog -->
+                    <div id="blog" class="info-box">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            My Blog
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Ervice refers to quality
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Service is intangible in nature
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Occurs frequently in retailing
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#"
+                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
+                                    Provided to a customer.
+                                    <i
+                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div id="testimonial" class="info-box">
+                        <div class="flex items-center justify-between mb-6 pb-5 border-b border-b-[#3c3e41]">
+                            <h2 class="text-[30px] text-primary  font-bold">
+                                Testimonial
+                            </h2>
+                            <div class="btn flex items-center gap-4">
+                                <button
+                                    class="custom_btn testimonial_slide_button_prev !px-[19px] hover:!translate-y-0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                                <button
+                                    class="custom_btn testimonial_slide_button_next !px-[19px] hover:!translate-y-0">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper testimonial_slide">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-01.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Akif
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        Engineer
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with Shakil Hossain was a great experience.<br
+                                                    class="hidden lg:block">
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Akif</a>
+                                                His problem-solving skills and attention to detail helped our project
+                                                move forward
+                                                quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-02.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Fahim
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        Backend Developer
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with Shakil Hossain was an outstanding experience.
+                                                <br lass="hidden lg:block">
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Fahim_Munna</a>
+                                                His backend expertise, attention to detail, and problem-solving skills
+                                                made our project smooth
+                                                and efficient from start to finish.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-03.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Tarik
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        Flutter Developer
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Tarik</a>
+                                                was a great experience. His
+                                                problem-solving skills and attention to detail helped our project move
+                                                forward quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-05.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Sohan
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        HR
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Sohan</a>
+                                                was a great experience. His
+                                                problem-solving skills and attention to detail helped our project move
+                                                forward quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-04.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @nayeem
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        UI/UX
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            Working with <a href="#"
+                                                class="underline transition-all duration-150 hover:text-primary">@nayeem</a>
+                                            was a fantastic experience. His UI/UX expertise and attention to detail
+                                            helped our project move forward smoothly and efficiently.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="testimonial_pagination flex items-center mt-4 justify-center"></div>
+                        </div>
+                    </div>
+
+                    <!-- Contact With Me -->
+                    <div id="contact" class="info-box">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Contact With Me
+                        </h2>
+                        <div class="form">
+                            <form action="#">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="input-group md:mb-6 col-span-1">
+                                        <div class="relative input-box">
+                                            <input type="text" id="username" required>
+                                            <label for="username">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group mb-6 col-span-1">
+                                        <div class="relative input-box">
+                                            <input type="text" id="number" required>
+                                            <label for="username">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-6">
+                                    <div class="relative input-box">
+                                        <input type="email" id="email" required>
+                                        <label for="username">Email</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-6">
+                                    <div class="relative input-box">
+                                        <input type="text" id="subject" required>
+                                        <label for="username">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-6">
+                                    <div class="relative input-box textarea-box">
+                                        <textarea name="Message" id="your-message" required></textarea>
+                                        <label for="username">Your Message</label>
+                                    </div>
+                                </div>
+                                <a href="#" class="custom_btn uppercase w-max gap-2 group">
+                                    <i
+                                        class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                    SEND MESSAGE
+                                    <i
+                                        class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- my gallery -->
+            <div class="grid grid-cols-12 gap-5 mb-6 my-gallery">
+
+                <!-- section title -->
+                <div class="col-span-12 section-title text-center mb-6 text-primary">
+                    <h2 class="text-3xl lg:text-[36px] font-bold mb-3">
+                        Captured Moments
+                    </h2>
+                    <p class="text-base text-[#3c3e41] mx-auto">
+                        A collection of some memorable moments and personal photos<br class="hidden lg:block">
+                        that reflect my journey, lifestyle, and experiences.
+                    </p>
+                </div>
+
+                <!-- item 1 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[220px] lg:h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-01.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Personal Moment</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A simple personal moment captured during
+                                my daily life and memorable experiences.
+                            </p>
+                            <a href="#"
+                                class="custom_btn uppercase gap-2 group w-full whitespace-nowrap h-[44px] text-[14px]">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Personal Moment
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[220px] lg:h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-02.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Travel Memory</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A travel memory captured while exploring
+                                new places and enjoying beautiful moments.
+                            </p>
+                            <a href="#"
+                                class="custom_btn uppercase gap-2 group w-full whitespace-nowrap h-[44px] text-[14px]">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Personal Moment
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[220px] lg:h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-03.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Life Snapshot</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A small snapshot from my personal life
+                                reflecting natural and meaningful moments.
+                            </p>
+                            <a href="#"
+                                class="custom_btn uppercase gap-2 group w-full whitespace-nowrap h-[44px] text-[14px]">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Personal Moment
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 4 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[220px] lg:h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-04.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Daily Lifestyle</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A glimpse of my everyday lifestyle and
+                                the moments that make life special.
+                            </p>
+                            <a href="#"
+                                class="custom_btn uppercase gap-2 group w-full whitespace-nowrap h-[44px] text-[14px]">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Personal Moment
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- script link -->
+    <script src="./js/img-move.js"></script>
+    <script src="./js/scrool-to-top.js"></script>
+
+    <!-- typed cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typing = new Typed(".text", {
+            strings: ["Software Engineer.", "Flutter Developer."],
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 1500,
+            loop: true,
+        });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".testimonial_slide", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            effect: "slide",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".testimonial_pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".testimonial_slide_button_next",
+                prevEl: ".testimonial_slide_button_prev",
+            },
+        });
+    </script>
+
+    <!-- offcanvas -->
+    <script src="./js/offcanvas.js"></script>
+
+    <!-- dark mode -->
+    <script src="./js/dark-mode.js"></script>
+
+    <!-- clamp -->
+    <script src="https://cdn.tailwindcss.com?plugins=line-clamp"></script>
+</body>
+
+</html>

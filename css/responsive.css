@@ -1,0 +1,84 @@
+  @media (max-width: 650px) {
+      .my-gallery .col-span-6 {
+          grid-column: span 12 / span 12;
+      }
+  }
+
+  @media (max-width: 991px) {
+      .info-box {
+          padding: 16px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .skill_img {
+          width: 60px;
+          height: 60px;
+      }
+
+      .skill_img img {
+          width: 26px;
+          height: 26px;
+          object-fit: cover;
+      }
+
+      /* my info */
+      .my_contact_info {
+          border: none;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          z-index: 10;
+          font-size: 16px;
+          background: var(--gradient-box-w);
+          box-shadow: var(--shadow-white-3);
+          transition: .3s linear;
+      }
+
+      .my_contact_info::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          background: var(--gradient-red-hover);
+          color: var(--color-secondary);
+          box-shadow: var(--shadow-white-3);
+          border-radius: 6px;
+          z-index: -1;
+          transition: .3s linear;
+          opacity: 0;
+          visibility: hidden;
+      }
+
+      .my_contact_info:hover {
+          transform: translateY(-4px);
+          color: var(--color-secondary);
+      }
+
+      .my_contact_info:hover::after {
+          opacity: 1;
+          visibility: visible;
+      }
+  }
+
+  @media (max-width: 360px) {
+      .Skill-icon-wrepper .col-span-3 {
+          grid-column: span 4 / span 4;
+      }
+
+      .Skill-icon-wrepper .col-span-1 {
+          grid-column: span 2 / span 2;
+      }
+  }
+
+  @media (max-width: 410px) {
+      .contact_me_btn {
+          padding: 16px !important;
+      }
+  }
