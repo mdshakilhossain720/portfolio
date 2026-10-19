@@ -1,0 +1,181 @@
+/*----------------------------------------*/
+/*  Footer
+/*----------------------------------------*/
+.site-footer {
+    padding-top: 60px;
+}
+
+@media (max-width: 991px) {
+    .site-footer {
+        padding-top: 40px;
+    }
+}
+
+/* title underline */
+.footer-title {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-title::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 36px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--color-primary);
+    transition: width .4s ease;
+}
+
+.footer-col:hover .footer-title::after {
+    width: 64px;
+}
+
+/* links */
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5c5f62;
+    transition: color .3s ease, transform .3s ease;
+}
+
+.footer-link i {
+    font-size: 12px;
+    color: var(--color-primary);
+    transition: transform .3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+    color: var(--color-primary);
+    transform: translateX(4px);
+}
+
+.footer-link:hover i {
+    transform: translateX(2px);
+}
+
+/* contact rows */
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3c3e41;
+    transition: color .3s ease;
+}
+
+a.footer-contact:hover {
+    color: var(--color-primary);
+}
+
+/* social / icon buttons (same look as .custom_btn) */
+.footer_social {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 17px;
+    color: var(--color-primary);
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .3s linear;
+}
+
+.footer_social::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: var(--gradient-red-hover);
+    z-index: -1;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+a.footer_social:hover,
+a.footer_social:focus-visible,
+a.footer-contact:hover .footer_social {
+    color: var(--color-secondary);
+    transform: translateY(-4px);
+}
+
+a.footer_social:hover::after,
+a.footer_social:focus-visible::after,
+a.footer-contact:hover .footer_social::after {
+    opacity: 1;
+}
+
+.footer_social_sm {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+}
+
+/* visible keyboard focus */
+.site-footer a:focus-visible,
+.site-footer button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* entrance animation */
+.site-footer .footer-col {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.site-footer .footer-col:nth-child(2) { transition-delay: .1s; }
+.site-footer .footer-col:nth-child(3) { transition-delay: .2s; }
+.site-footer .footer-col:nth-child(4) { transition-delay: .3s; }
+
+.site-footer.is-visible .footer-col {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-footer .footer-col {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* dark mode */
+body.dark .footer-link {
+    color: rgb(192 196 201);
+}
+
+body.dark .footer-link:hover {
+    color: var(--color-primary);
+}
+
+body.dark .footer-contact {
+    color: #fff;
+}
+
+body.dark a.footer-contact:hover {
+    color: var(--color-primary);
+}
+
+body.dark .footer_social {
+    background: rgb(40, 39, 39);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
